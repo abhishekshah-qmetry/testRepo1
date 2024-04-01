@@ -1,0 +1,13 @@
+version: '3.9'
+services:
+  redisinsight:
+    container_name: redisinsight
+    image: redislabs/redisinsight:latest
+    ports: 
+      - '8001:8001'
+      
+networks:
+    local_cloud_env:
+        driver: bridge
+    cloud_network:
+        driver: bridge
